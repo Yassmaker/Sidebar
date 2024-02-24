@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: url(pexels-ruvim-miksanskiy-1438761.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+header{
+    width: 100vw;
+    height: 10vh;
+    background: #305C79;
+    display: flex;
+    position: fixed;
+}
+.boxLeft{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.nav{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+.nav a {
+    text-decoration: none;
+    padding: 50px;
+    font-size: 17px;
+    transition: all ease-in-out 0.5s;
+    color: #507890;
+}
+.nav a:hover{
+    transform: translateY(5px);
+    color: #95B7DC;
+}
+.svg{
+    display: none;
+    margin-right: 30px;
+}
+.Sidebar{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    display: none;
+}
+@media (max-width:780px) {
+    .nav ul{
+        display: none;
+    }
+    .svg{
+        display: block;
+        fill: #95B7DC;
+        cursor: pointer;
+    }
+    .Sidebar{
+        display: none;
+        background: #305c79b0;
+        backdrop-filter: blur(10px);
+    }
+    
+    .NavSidebar{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .NavSidebar ul
+    {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 20px;
+        height: 90%;
+        width: 100%;
+    }
+    .NavSidebar a{
+        padding: 20px;
+        text-decoration: none;
+        font-size: 24px;
+        color: #95B7DC;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        transition: 0.5s ease-in-out;
+    }
+    .NavSidebar a:hover{
+        transform: translateX(15px);
+        list-style: disc;
+    }
+    .BoxSVG{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .svgX{
+        margin-right: 30px;
+        fill: #95B7DC;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+    .svgX:hover{
+        transform: rotate(360deg);
+    }
+}
+@media (max-width:450px) {
+    .Sidebar{
+        width: 100%;
+        height: 100%;
+    }
+}
